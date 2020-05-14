@@ -1,0 +1,103 @@
+Autotested Results for A3 submitted by XUAN DU (duxuan1)
+Generated at 2020-03-13T22:53:09
+
+Summary of Results: 35 out of 36 tests successfully passed
+--
+
+Tests for bruteforce.BruteforceTest (4/4 passed)
+--
+
+1) bruteforce.BruteforceTest.test_32_element_list                                     .. ok!
+2) bruteforce.BruteforceTest.test_duplicate_points                                    .. ok!
+3) bruteforce.BruteforceTest.test_short_even_list                                     .. ok!
+4) bruteforce.BruteforceTest.test_short_odd_list                                      .. ok!
+
+
+Tests for overflow.OverflowTest (1/1 passed)
+--
+
+1) overflow.OverflowTest.test_overlow                                                 .. ok!
+
+
+Tests for serial.SerialTest (7/7 passed)
+--
+
+1) serial.SerialTest.test_32_element_list                                             .. ok!
+2) serial.SerialTest.test_33_element_list                                             .. ok!
+3) serial.SerialTest.test_duplicate_points                                            .. ok!
+4) serial.SerialTest.test_is_recursive                                                .. ok!
+5) serial.SerialTest.test_large_list_one                                              .. ok!
+6) serial.SerialTest.test_large_list_three                                            .. ok!
+7) serial.SerialTest.test_large_list_two                                              .. ok!
+
+
+Tests for parallel.ParallelTest (9/9 passed)
+--
+
+1) parallel.ParallelTest.test_32_element_list                                         .. ok!
+2) parallel.ParallelTest.test_33_element_list                                         .. ok!
+3) parallel.ParallelTest.test_duplicate_points                                        .. ok!
+4) parallel.ParallelTest.test_large_list_one                                          .. ok!
+5) parallel.ParallelTest.test_large_list_three                                        .. ok!
+6) parallel.ParallelTest.test_large_list_two                                          .. ok!
+7) parallel.ParallelTest.test_processes_32_element_list                               .. ok!
+8) parallel.ParallelTest.test_processes_49_element_list                               .. ok!
+9) parallel.ParallelTest.test_processes_large_list                                    .. ok!
+
+
+Tests for parallel_with_init.ParallelWithInitTest (9/9 passed)
+--
+
+1) parallel_with_init.ParallelWithInitTest.test_32_element_list                       .. ok!
+2) parallel_with_init.ParallelWithInitTest.test_33_element_list                       .. ok!
+3) parallel_with_init.ParallelWithInitTest.test_duplicate_points                      .. ok!
+4) parallel_with_init.ParallelWithInitTest.test_large_list_one                        .. ok!
+5) parallel_with_init.ParallelWithInitTest.test_large_list_three                      .. ok!
+6) parallel_with_init.ParallelWithInitTest.test_large_list_two                        .. ok!
+7) parallel_with_init.ParallelWithInitTest.test_processes_32_element_list             .. ok!
+8) parallel_with_init.ParallelWithInitTest.test_processes_49_element_list             .. ok!
+9) parallel_with_init.ParallelWithInitTest.test_processes_large_list                  .. ok!
+
+
+Tests for traces.CallTraceTest (5/6 passed)
+--
+
+1) traces.CallTraceTest.test_checks_mid_after_wait                                    .. ok!
+2) traces.CallTraceTest.test_forks_twice                                              .. ok!
+3) traces.CallTraceTest.test_forks_twice_before_wait                                  .. ok!
+4) traces.CallTraceTest.test_qsort_called                                             .. ok!
+5) traces.CallTraceTest.test_reads_from_pipes                                         .. ok!
+6) traces.CallTraceTest.test_closes_pipe_before_wait                                  .. failed
+.. because 'wait not found in proper order in the trace of library calls' != ''
+- wait not found in proper order in the trace of library calls
++ 
+ (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a3/test_helpers.py", line 259, in _t
+        self.assertEqual(_check_trace(stderr, calls), '')
+
+      File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+        assertion_func(first, second, msg=msg)
+
+      File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+        self.fail(self._formatMessage(msg, standardMsg))
+
+      File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+        raise self.failureException(msg)
+
+    AssertionError: 'wait not found in proper order in the trace of library calls' != ''
+    - wait not found in proper order in the trace of library calls
+    + 
+
+
+
+
+

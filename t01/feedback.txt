@@ -1,0 +1,14 @@
+.bashrc does not contain (correct) code to update prompt (please test carefully)
+
+ERROR: hello program does not provide correct output
+Output expected with even number of parameters:
+	Hello 2 you, world!
+Received:
+	Hello 2 world!
+Output expected with odd number of parameters:
+	Hello world!
+Received:
+	Hello world!
+Check your output carefully, please!
+
+2 / 4

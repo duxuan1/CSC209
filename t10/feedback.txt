@@ -1,0 +1,3 @@
+Marks granted for bufserver.c test 2
+Orders accepted are: socket(), bind(), listen(), accept(),connect(),send(),recv() or socket(), bind(), listen(),connect(),accept(),send(),recv() or socket(),bind(),listen(),connect(),send(),accept(),recv()
+2 / 3

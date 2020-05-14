@@ -1,0 +1,27 @@
+Mark Summary for Assignment 2 (02-19), submitted by duxuan1
+
+ArgumentsTest: 2.0 / 2
+	- Completed basic tests ['createfile_extraargs', 'createfile_noarg']
+	- Completed comprehensive tests ['readfile_missingarg', 'readfile_nonnumericarg', 'deletefile_noarg']
+CreatefileTest: 3 / 3
+	- Completed basic tests ['emptyfs']
+	- Completed special cases ['emptyfentryatend', 'emptyfentryinmiddle']
+	- Completed comprehensive tests ['nofentry', 'nametoolong', 'duplicatefilename']
+DeletefileTest: 3 / 3
+	- Completed basic tests ['nodata_fentry', 'nodata_fnodes']
+	- Completed special cases ['onedatablock_fentry', 'onedatablock_fnodes', 'multipledatablock_fentry', 'multipledatablock_fnodes']
+	- Completed comprehensive tests ['filenotfound']
+ReadfileTest: 3.0 / 4
+	- Completed basic tests ['firstfile_start0_lessthanblocksize']
+	- Failed at least one special case test ['firstfile_start2_lessthanblocksize', 'firstfile_start0_morethanblocksize', 'firstfile_start10_morethanblocksize', 'firstfile_start3_morethandoubleblocksize', 'middlefile', 'blankfentry_before_file']
+	- Completed comprehensive tests ['filenotfound', 'startinvalid', 'lengthinvalid']
+WritefileTest: 3 / 3
+	- Completed basic tests ['test_size0_lessthanblocksize']
+	- Completed special cases ['size0_morethanblocksize', 'overwriting_lessthanblocksize', 'largesize_noallocneeded', 'largesize_noallocneeded']
+	- Completed comprehensive tests ['filenotfound', 'diskfull_size0', 'diskfull_largesize']
+BadFSTest: 0 / 2
+	- Failed at least one basic test ['badfirstindex']
+Different FS Parameters:  2 / 3
+	- 4 of 6 tests passed
+Total score: 16.0 / 20
+Final score reduced due to resubmission:  14.4 / 20

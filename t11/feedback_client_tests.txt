@@ -1,0 +1,44 @@
+FFF
+======================================================================
+FAIL: test_splitting_messages (__main__.TestBufServer)
+Client reads an oversized message from stdin
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "client_test.py", line 79, in test_splitting_messages
+    time.sleep(0.1)
+  File "/usr/lib/python3.6/contextlib.py", line 88, in __exit__
+    next(self.gen)
+  File "/virtual/csc209/tutorials/w20/mark_t11/test_helpers.py", line 539, in ongoing_process
+    assert proc.returncode >= 0, 'Process exited due to a signal'
+AssertionError: Process exited due to a signal
+
+======================================================================
+FAIL: test_two_clients (__main__.TestBufServer)
+Two clients connect to server and send messages to each other
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "client_test.py", line 32, in test_two_clients
+    time.sleep(0.1)
+  File "/usr/lib/python3.6/contextlib.py", line 88, in __exit__
+    next(self.gen)
+  File "/virtual/csc209/tutorials/w20/mark_t11/test_helpers.py", line 539, in ongoing_process
+    assert proc.returncode >= 0, 'Process exited due to a signal'
+AssertionError: Process exited due to a signal
+
+======================================================================
+FAIL: test_two_clients_format (__main__.TestBufServer)
+Two clients connect to server and send messages to each other.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "client_test.py", line 57, in test_two_clients_format
+    time.sleep(0.1)
+  File "/usr/lib/python3.6/contextlib.py", line 88, in __exit__
+    next(self.gen)
+  File "/virtual/csc209/tutorials/w20/mark_t11/test_helpers.py", line 539, in ongoing_process
+    assert proc.returncode >= 0, 'Process exited due to a signal'
+AssertionError: Process exited due to a signal
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.222s
+
+FAILED (failures=3)

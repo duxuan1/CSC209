@@ -1,0 +1,26 @@
+Mark report for CSC209 Assignment 1 for duxuan1
+======================================================
+                                                      
+Your mark is 8/10=80%
+                                                      
+
+=================================================================
+Your mark for A1 is max of your mark computed on first submission
+and your mark computed on secon submission. For each submission
+computation is done as follows:
+1) If your code does not compile or (obviously) if you do
+not have a submission, your mark is 0
+2) If you have a submission and your code compiles, your mark
+ is computed as follows.
+   -If your code does no pass the sanity check, your mark
+    equals number of tests (out of 10).
+   -If your code does pass the sanity check, your mark is set to:
+      -If you pass less than 2 tests, your mark is set to 2
+      -If you pass 2 to 3 tests, your mark is set to 5
+      -If you pass 4 to 5 tests, your mark is set to 6.
+      -Else your mark is simply number of tests that your code passes.
+============================================================================
+                                                      
+Test report files are named report1.txt and report2.txt
+Compilation and execution report files are named
+feedback1.txt and feedback2.txt.

@@ -1,0 +1,22 @@
+===== Question 1 =====
+B
+E
+===== Question 2 =====
+Total orderings = 10
+ABDEBCE
+ABDBCEE
+ABCEBDE
+ABBDECE
+ABCBDEE
+ABCDEBE
+ABDBECE
+ABDCEBE
+ABBCEDE
+ABCBEDE
+===== Question 3 =====
+16
+===== Question 4 =====
+776 -> 777 -> 779 -> 781
+776 -> 777 -> 780
+776 -> 778 -> 783
+776 -> 782

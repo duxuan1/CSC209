@@ -1,0 +1,326 @@
+Autotested Results for A2 submitted by Xuan Du (duxuan1)
+Generated at 2020-02-15T02:10:21
+
+Summary of Results: 28 out of 37 tests successfully passed
+--
+
+Tests for args_tests.ArgumentsTest (5/5 passed)
+--
+
+1) args_tests.ArgumentsTest.test_createfile_extraargs                                 .. ok!
+2) args_tests.ArgumentsTest.test_createfile_noarg                                     .. ok!
+3) args_tests.ArgumentsTest.test_deletefile_noarg                                     .. ok!
+4) args_tests.ArgumentsTest.test_readfile_missingarg                                  .. ok!
+5) args_tests.ArgumentsTest.test_readfile_nonnumericarg                               .. ok!
+
+
+Tests for create_tests.CreatefileTest (5/6 passed)
+--
+
+1) create_tests.CreatefileTest.test_duplicatefilename                                 .. ok!
+2) create_tests.CreatefileTest.test_emptyfentryatend                                  .. ok!
+3) create_tests.CreatefileTest.test_emptyfentryinmiddle                               .. ok!
+4) create_tests.CreatefileTest.test_emptyfs                                           .. ok!
+5) create_tests.CreatefileTest.test_nofentry                                          .. ok!
+6) create_tests.CreatefileTest.test_nametoolong                                       .. failed
+.. because '' == '' (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 230, in _t
+        self.assertNotEqual(stderr.rstrip(), '')
+
+      File "/usr/lib/python3.6/unittest/case.py", line 838, in assertNotEqual
+        raise self.failureException(msg)
+
+    AssertionError: '' == ''
+
+
+
+
+Tests for delete_tests.DeletefileTest (7/7 passed)
+--
+
+1) delete_tests.DeletefileTest.test_filenotfound                                      .. ok!
+2) delete_tests.DeletefileTest.test_multipledatablock_fentry                          .. ok!
+3) delete_tests.DeletefileTest.test_multipledatablock_fnodes                          .. ok!
+4) delete_tests.DeletefileTest.test_nodata_fentry                                     .. ok!
+5) delete_tests.DeletefileTest.test_nodata_fnodes                                     .. ok!
+6) delete_tests.DeletefileTest.test_onedatablock_fentry                               .. ok!
+7) delete_tests.DeletefileTest.test_onedatablock_fnodes                               .. ok!
+
+
+Tests for read_tests.ReadfileTest (6/10 passed)
+--
+
+1) read_tests.ReadfileTest.test_filenotfound                                          .. ok!
+2) read_tests.ReadfileTest.test_firstfile_start0_morethanblocksize                    .. ok!
+3) read_tests.ReadfileTest.test_firstfile_start10_morethanblocksize                   .. ok!
+4) read_tests.ReadfileTest.test_firstfile_start3_morethandoubleblocksize              .. ok!
+5) read_tests.ReadfileTest.test_lengthinvalid                                         .. ok!
+6) read_tests.ReadfileTest.test_startinvalid                                          .. ok!
+7) read_tests.ReadfileTest.test_blankfentry_before_file                               .. error
+.. because 'utf-8' codec can't decode byte 0xeb in position 24: invalid continuation byte (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 158, in _t
+        stdout, stderr, returncode = self._run_exec(args=args, input_=input_, timeout=timeout, check=check)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 99, in _run_exec
+        **kwargs)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 284, in _exec
+        stdout, stderr = proc.communicate(timeout=timeout, input=input_)
+
+      File "/usr/lib/python3.6/subprocess.py", line 863, in communicate
+        stdout, stderr = self._communicate(input, endtime, timeout)
+
+      File "/usr/lib/python3.6/subprocess.py", line 1574, in _communicate
+        self.stdout.errors)
+
+      File "/usr/lib/python3.6/subprocess.py", line 760, in _translate_newlines
+        data = data.decode(encoding, errors)
+
+    UnicodeDecodeError: 'utf-8' codec can't decode byte 0xeb in position 24: invalid continuation byte
+
+
+8) read_tests.ReadfileTest.test_firstfile_start0_lessthanblocksize                    .. error
+.. because 'utf-8' codec can't decode bytes in position 24-25: invalid continuation byte (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 158, in _t
+        stdout, stderr, returncode = self._run_exec(args=args, input_=input_, timeout=timeout, check=check)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 99, in _run_exec
+        **kwargs)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 284, in _exec
+        stdout, stderr = proc.communicate(timeout=timeout, input=input_)
+
+      File "/usr/lib/python3.6/subprocess.py", line 863, in communicate
+        stdout, stderr = self._communicate(input, endtime, timeout)
+
+      File "/usr/lib/python3.6/subprocess.py", line 1574, in _communicate
+        self.stdout.errors)
+
+      File "/usr/lib/python3.6/subprocess.py", line 760, in _translate_newlines
+        data = data.decode(encoding, errors)
+
+    UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 24-25: invalid continuation byte
+
+
+9) read_tests.ReadfileTest.test_firstfile_start2_lessthanblocksize                    .. error
+.. because 'utf-8' codec can't decode bytes in position 24-25: invalid continuation byte (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 158, in _t
+        stdout, stderr, returncode = self._run_exec(args=args, input_=input_, timeout=timeout, check=check)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 99, in _run_exec
+        **kwargs)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 284, in _exec
+        stdout, stderr = proc.communicate(timeout=timeout, input=input_)
+
+      File "/usr/lib/python3.6/subprocess.py", line 863, in communicate
+        stdout, stderr = self._communicate(input, endtime, timeout)
+
+      File "/usr/lib/python3.6/subprocess.py", line 1574, in _communicate
+        self.stdout.errors)
+
+      File "/usr/lib/python3.6/subprocess.py", line 760, in _translate_newlines
+        data = data.decode(encoding, errors)
+
+    UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 24-25: invalid continuation byte
+
+
+10) read_tests.ReadfileTest.test_middlefile                                            .. error
+.. because 'utf-8' codec can't decode byte 0xfd in position 4: invalid start byte (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 158, in _t
+        stdout, stderr, returncode = self._run_exec(args=args, input_=input_, timeout=timeout, check=check)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 99, in _run_exec
+        **kwargs)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 284, in _exec
+        stdout, stderr = proc.communicate(timeout=timeout, input=input_)
+
+      File "/usr/lib/python3.6/subprocess.py", line 863, in communicate
+        stdout, stderr = self._communicate(input, endtime, timeout)
+
+      File "/usr/lib/python3.6/subprocess.py", line 1574, in _communicate
+        self.stdout.errors)
+
+      File "/usr/lib/python3.6/subprocess.py", line 760, in _translate_newlines
+        data = data.decode(encoding, errors)
+
+    UnicodeDecodeError: 'utf-8' codec can't decode byte 0xfd in position 4: invalid start byte
+
+
+
+
+Tests for write_tests.WritefileTest (5/7 passed)
+--
+
+1) write_tests.WritefileTest.test_diskfull_largesize                                  .. ok!
+2) write_tests.WritefileTest.test_diskfull_size0                                      .. ok!
+3) write_tests.WritefileTest.test_filenotfound                                        .. ok!
+4) write_tests.WritefileTest.test_overwriting_lessthanblocksize                       .. ok!
+5) write_tests.WritefileTest.test_size0_lessthanblocksize                             .. ok!
+6) write_tests.WritefileTest.test_largesize_noallocneeded                             .. failed
+.. because '' == '' (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 230, in _t
+        self.assertNotEqual(stderr.rstrip(), '')
+
+      File "/usr/lib/python3.6/unittest/case.py", line 838, in assertNotEqual
+        raise self.failureException(msg)
+
+    AssertionError: '' == ''
+
+
+7) write_tests.WritefileTest.test_size0_morethanblocksize                             .. failed
+.. because 'Error: length larger than stdin\n' != ''
+- Error: length larger than stdin
+ (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 241, in _t
+        self.assertEqual(stderr, '')
+
+      File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+        assertion_func(first, second, msg=msg)
+
+      File "/usr/lib/python3.6/unittest/case.py", line 1203, in assertMultiLineEqual
+        self.fail(self._formatMessage(msg, standardMsg))
+
+      File "/usr/lib/python3.6/unittest/case.py", line 670, in fail
+        raise self.failureException(msg)
+
+    AssertionError: 'Error: length larger than stdin\n' != ''
+    - Error: length larger than stdin
+
+
+
+
+
+Tests for bad_fs.BadFSTest (0/2 passed)
+--
+
+1) bad_fs.BadFSTest.test_badfirstindex                                                .. error
+.. because 'utf-8' codec can't decode byte 0xf1 in position 1: invalid continuation byte (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 229, in _t
+        stdout, stderr, returncode = self._run_exec(args=args, input_=input_, timeout=timeout, check=check)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 99, in _run_exec
+        **kwargs)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 284, in _exec
+        stdout, stderr = proc.communicate(timeout=timeout, input=input_)
+
+      File "/usr/lib/python3.6/subprocess.py", line 863, in communicate
+        stdout, stderr = self._communicate(input, endtime, timeout)
+
+      File "/usr/lib/python3.6/subprocess.py", line 1574, in _communicate
+        self.stdout.errors)
+
+      File "/usr/lib/python3.6/subprocess.py", line 760, in _translate_newlines
+        data = data.decode(encoding, errors)
+
+    UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf1 in position 1: invalid continuation byte
+
+
+2) bad_fs.BadFSTest.test_invalidfname                                                 .. error
+.. because 'utf-8' codec can't decode byte 0xfc in position 2: invalid start byte (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 229, in _t
+        stdout, stderr, returncode = self._run_exec(args=args, input_=input_, timeout=timeout, check=check)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 99, in _run_exec
+        **kwargs)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 284, in _exec
+        stdout, stderr = proc.communicate(timeout=timeout, input=input_)
+
+      File "/usr/lib/python3.6/subprocess.py", line 863, in communicate
+        stdout, stderr = self._communicate(input, endtime, timeout)
+
+      File "/usr/lib/python3.6/subprocess.py", line 1574, in _communicate
+        self.stdout.errors)
+
+      File "/usr/lib/python3.6/subprocess.py", line 760, in _translate_newlines
+        data = data.decode(encoding, errors)
+
+    UnicodeDecodeError: 'utf-8' codec can't decode byte 0xfc in position 2: invalid start byte
+
+
+
+

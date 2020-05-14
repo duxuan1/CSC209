@@ -1,0 +1,2 @@
+running valgrind on ll_sum.c produced errors.
+2 / 3

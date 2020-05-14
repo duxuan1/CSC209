@@ -1,0 +1,4 @@
+1sec run: 26666149 reads were done in 1 seconds.
+2sec run: 213927106 reads were done in 2 seconds.
+No errors detected
+3 / 3

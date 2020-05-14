@@ -1,0 +1,89 @@
+Autotested Results for N/A submitted by 
+Generated at N/A
+
+Summary of Results: 4 out of 6 tests successfully passed
+--
+
+Tests for create_tests.CreatefileTest (2/2 passed)
+--
+
+1) create_tests.CreatefileTest.test_emptyfs                                           .. ok!
+2) create_tests.CreatefileTest.test_nofentry                                          .. ok!
+
+
+Tests for write_tests.WritefileTest (2/2 passed)
+--
+
+1) write_tests.WritefileTest.test_size0_lessthanblocksize                             .. ok!
+2) write_tests.WritefileTest.test_size2_morethanblocksize                             .. ok!
+
+
+Tests for read_tests.ReadfileTest (0/2 passed)
+--
+
+1) read_tests.ReadfileTest.test_firstfile_start0_lessthanblocksize                    .. error
+.. because 'utf-8' codec can't decode byte 0xfd in position 4: invalid start byte (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 158, in _t
+        stdout, stderr, returncode = self._run_exec(args=args, input_=input_, timeout=timeout, check=check)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 99, in _run_exec
+        **kwargs)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 284, in _exec
+        stdout, stderr = proc.communicate(timeout=timeout, input=input_)
+
+      File "/usr/lib/python3.6/subprocess.py", line 863, in communicate
+        stdout, stderr = self._communicate(input, endtime, timeout)
+
+      File "/usr/lib/python3.6/subprocess.py", line 1574, in _communicate
+        self.stdout.errors)
+
+      File "/usr/lib/python3.6/subprocess.py", line 760, in _translate_newlines
+        data = data.decode(encoding, errors)
+
+    UnicodeDecodeError: 'utf-8' codec can't decode byte 0xfd in position 4: invalid start byte
+
+
+2) read_tests.ReadfileTest.test_firstfile_start4_morethanblocksize                    .. error
+.. because 'utf-8' codec can't decode byte 0xff in position 4: invalid start byte (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 158, in _t
+        stdout, stderr, returncode = self._run_exec(args=args, input_=input_, timeout=timeout, check=check)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 99, in _run_exec
+        **kwargs)
+
+      File "/res/peters43/209/duxuan1/a2/test_helpers.py", line 284, in _exec
+        stdout, stderr = proc.communicate(timeout=timeout, input=input_)
+
+      File "/usr/lib/python3.6/subprocess.py", line 863, in communicate
+        stdout, stderr = self._communicate(input, endtime, timeout)
+
+      File "/usr/lib/python3.6/subprocess.py", line 1574, in _communicate
+        self.stdout.errors)
+
+      File "/usr/lib/python3.6/subprocess.py", line 760, in _translate_newlines
+        data = data.decode(encoding, errors)
+
+    UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 4: invalid start byte
+
+
+
+

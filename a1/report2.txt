@@ -1,0 +1,65 @@
+Autotested Results for a1 submitted by fn ln (duxuan1)
+Generated at 2020-02-04T21:58:33
+
+Summary of Results: 8 out of 10 tests successfully passed
+--
+
+Tests for test_fin.TestCallHelperModule (8/10 passed)
+--
+
+1) test_fin.TestCallHelperModule.test_2fin2ms                                         .. ok!
+2) test_fin.TestCallHelperModule.test_2fout2ms                                        .. ok!
+3) test_fin.TestCallHelperModule.test_fin3ms                                          .. ok!
+4) test_fin.TestCallHelperModule.test_fin5ms                                          .. ok!
+5) test_fin.TestCallHelperModule.test_fin6ms                                          .. ok!
+6) test_fin.TestCallHelperModule.test_header_large                                    .. ok!
+7) test_fin.TestCallHelperModule.test_header_small                                    .. ok!
+8) test_fin.TestCallHelperModule.test_pan4ms                                          .. ok!
+9) test_fin.TestCallHelperModule.test_fout3ms                                         .. failed
+.. because 0 != 1 : Data of ssmall_fout3ms.wav is incorrect. (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/home/ilir/csc209/tutorials/w20/Mark_a1/pam/submissions/duxuan1/a1/test_fin.py", line 25, in test_fout3ms
+        self.assertEqual(t.compare_data(1), 1,'Data of ssmall_fout3ms.wav is incorrect.')
+
+      File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+        assertion_func(first, second, msg=msg)
+
+      File "/usr/lib/python3.6/unittest/case.py", line 822, in _baseAssertEqual
+        raise self.failureException(msg)
+
+    AssertionError: 0 != 1 : Data of ssmall_fout3ms.wav is incorrect.
+
+
+10) test_fin.TestCallHelperModule.test_fout6ms                                         .. failed
+.. because 0 != 1 : Data of ssmall_fout7.wav is incorrect. (details below):
+
+    Traceback (most recent call last):
+
+      File "/usr/lib/python3.6/unittest/case.py", line 59, in testPartExecutor
+        yield
+
+      File "/usr/lib/python3.6/unittest/case.py", line 605, in run
+        testMethod()
+
+      File "/home/ilir/csc209/tutorials/w20/Mark_a1/pam/submissions/duxuan1/a1/test_fin.py", line 33, in test_fout6ms
+        self.assertEqual(t.compare_data(3), 1,'Data of ssmall_fout7.wav is incorrect.')
+
+      File "/usr/lib/python3.6/unittest/case.py", line 829, in assertEqual
+        assertion_func(first, second, msg=msg)
+
+      File "/usr/lib/python3.6/unittest/case.py", line 822, in _baseAssertEqual
+        raise self.failureException(msg)
+
+    AssertionError: 0 != 1 : Data of ssmall_fout7.wav is incorrect.
+
+
+
+

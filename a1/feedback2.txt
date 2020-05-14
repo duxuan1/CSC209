@@ -1,0 +1,17 @@
+Compiling and running sanity check.
+
+Sanity check passed.
+make terminated within timelimit.
+./effects -fin 0 <effects >dummy terminated within timelimit.
+xxd -g1 small.wav|./effects -fin 3|xxd -r >ssmall_fin3ms.wav terminated within timelimit.
+xxd -g1 small.wav|./effects -fin 6|xxd -r >ssmall_fin6ms.wav terminated within timelimit.
+xxd -g1 small.wav|./effects -fout 3|xxd -r >ssmall_fout3ms.wav terminated within timelimit.
+xxd -g1 small.wav|./effects -fout 6|xxd -r >ssmall_fout6ms.wav terminated within timelimit.
+xxd -g1 tone.wav|./effects -fin 100|xxd -r >stone_fin100.wav terminated within timelimit.
+xxd -g1 small.wav|./effects -fin 5|xxd -r >ssmall_fin5.wav terminated within timelimit.
+xxd -g1 small2chan.wav|./effects -pan 4|xxd -r >ssmall_pan4ms.wav terminated within timelimit.
+xxd -g1 small2chan.wav|./effects -fin 2|xxd -r >ssmall2_fin2ms.wav terminated within timelimit.
+xxd -g1 small2chan.wav|./effects -fout 2|xxd -r >ssmall2_fout2ms.wav terminated within timelimit.
+xxd -g1 small.wav|./effects -fout 7|xxd -r >ssmall_fout7.wav terminated within timelimit.
+xxd -g1 small.wav|./effects -fin 7|xxd -r >ssmall_fin7.wav terminated within timelimit.
+Mark: 14/14

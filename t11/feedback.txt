@@ -1,0 +1,10 @@
+=== make output (start) ===
+gcc -DSERVER_PORT=30155 -g -Wall -Werror -fsanitize=address -c chat_server.c
+gcc -DSERVER_PORT=30155 -g -Wall -Werror -fsanitize=address -c socket.c
+gcc -DSERVER_PORT=30155 -g -Wall -Werror -fsanitize=address -c chat_helpers.c
+gcc -DSERVER_PORT=30155 -g -Wall -Werror -fsanitize=address -o chat_server chat_server.o socket.o chat_helpers.o
+gcc -DSERVER_PORT=30155 -g -Wall -Werror -fsanitize=address -c chat_client.c
+gcc -DSERVER_PORT=30155 -g -Wall -Werror -fsanitize=address -o chat_client chat_client.o socket.o
+=== make output (end) ===
+Make run with : Your chat_helpers.c  chat_helpers.h  socket.c and Our chat_cilent.c 
+1.3 / 3.0

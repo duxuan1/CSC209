@@ -1,0 +1,32 @@
+.FF...F
+======================================================================
+FAIL: test_long_msg (__main__.TestBufServer)
+Client sends excessively long message
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "server_test.py", line 63, in test_long_msg
+    self.assertTrue(cstatus == 0)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_longname (__main__.TestBufServer)
+Client sends excessively long user name
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "server_test.py", line 47, in test_longname
+    self.assertTrue(cstatus == 0)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_username_with_space (__main__.TestBufServer)
+Client sends username with a space
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "server_test.py", line 31, in test_username_with_space
+    self.assertTrue(cstatus == 0)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.412s
+
+FAILED (failures=3)
